@@ -1,8 +1,8 @@
 const fibonacci = require("./fibonacci");
 
 describe("test fibonacci", () => {
-  test("fibonacci(0) === 0", () => {
-    expect(fibonacci(0)).toBe(0);
+  test("fibonacci(1) === 0", () => {
+    expect(fibonacci(1)).toBe(0);
   });
 
   test("fibonacci(2) === 1", () => {
