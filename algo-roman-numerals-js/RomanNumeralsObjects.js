@@ -40,8 +40,18 @@ function toRoman(num) {
         }
         }
     }
+    //// Iterate straight through object //////
+    // for (ltr in numeralCharacters) {
+    //     if (num / numeralCharacters[ltr] >= 1) {
+    //         howMany = Math.floor(num / numeralCharacters[ltr]);
+    //         for (i = howMany; i > 0; i--) {
+    //             output += ltr;
+    //             num -= numeralCharacters[ltr]
+    //         }
+    //     }
+    // }
 console.log(output);
 return output;
 
     }
-console.log(toRoman(344))
+console.log(toRoman(444))
