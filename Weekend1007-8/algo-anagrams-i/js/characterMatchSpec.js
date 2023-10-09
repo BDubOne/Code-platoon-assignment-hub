@@ -12,7 +12,6 @@ console.log(ana.isCharacterMatch('Anna Madrigal', 'A man and a girl') === true);
 
 // Part 2
 listOfWords = ["threads", "trashed", "hardest", "hatreds", "hounds"];
-
 console.log(ana.anagramsFor("threads", listOfWords).length == 4);
 console.log(ana.anagramsFor("threads", listOfWords)[0] == "threads");
 console.log(ana.anagramsFor("threads", listOfWords)[1] == "trashed");

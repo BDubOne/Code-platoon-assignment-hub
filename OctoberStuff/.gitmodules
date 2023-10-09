@@ -1,9 +1,0 @@
-[submodule "algo-fibonacci"]
-	path = algo-fibonacci
-	url = https://github.com/Code-Platoon-Assignments/algo-fibonacci
-[submodule "algo-linear-search"]
-	path = algo-linear-search
-	url = https://github.com/Code-Platoon-Assignments/algo-linear-search
-[submodule "algo-roman-numerals"]
-	path = algo-roman-numerals
-	url = https://github.com/Code-Platoon-Assignments/algo-roman-numerals
