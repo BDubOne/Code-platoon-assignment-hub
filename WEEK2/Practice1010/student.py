@@ -13,7 +13,7 @@ class Student:
 
     @email.setter
     def set_email(self, new_email):
-        if type(new_email) == string and "@school.org" in new_email:
+        if type(new_email) == str and "@school.org" in new_email:
             self._email = new_email
     
     @property
@@ -41,3 +41,6 @@ print(student_one)
 
 student_one.set_id = "m34b5678"
 print(student_one.id)
+
+student_one.go_to_class()
+
