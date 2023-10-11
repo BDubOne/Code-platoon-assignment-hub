@@ -10,5 +10,12 @@ CarManager.view_all_cars()
 
 def add_a_car
 def main():
-    print("Welcome to our World-Famous Car Lot!")
-    print("1. View all cars\n2.")
+    welcome_message = '''
+-------Welcome to Our World-Famous Car Lot-------  
+            What would you like to do?
+1. Add a car           |        2. View all cars
+3. See inventory size  |        4. See car details 
+5. Service a car       |        6. Update Mileage
+7. quit
+    ''' 
+    
