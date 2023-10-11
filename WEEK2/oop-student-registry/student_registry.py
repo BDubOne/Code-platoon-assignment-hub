@@ -1,2 +1,2 @@
 class Student:
-    pass
+    
