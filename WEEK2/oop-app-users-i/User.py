@@ -1,6 +1,7 @@
 
 class User:
     user_list = []
+    all_posts = []
     
     def __init__(self, name, age, email, dl_number, address, favorite_food, favorite_band, posts=[]):
         self._name = name
@@ -34,7 +35,8 @@ class User:
         description = input("What do you have  to say?     ")
         post = {title: description}
         self.posts.append(post)
-        return post
+        User.all_posts.append(post)
+       
     
     def get_post(self,title):
         for post in self.posts:
