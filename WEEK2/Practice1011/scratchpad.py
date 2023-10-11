@@ -34,10 +34,29 @@ class Student:
         if valid in new_email[:-len(valid)]:
             self._email = new_email
     
+    #Instance method refers to self and interacts only with a particular instance
     def go_to_school(self):
         return f"{self.name} is going to school"
     
     def start_studying(self):
         return f"{self.name} is studying right now"
+
+    #Class method interacts with and possibly changes a class value
+    @classmethod
+    def add_a_student(cls):
+        name = input("Student name: ")
+        email = name + "@student.org"
+        cls(name, email)
+        print(cls.all_students)
+    #Static method can access either class or instance, but does not change the class data
+    @staticmethod
+    def view_all_students(cls):
+        for student in cls.all_students.value():
+            print(student)
+
+    '''STATIC METHODS'''
+
+    
+
  
     
