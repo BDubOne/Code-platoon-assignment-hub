@@ -37,3 +37,4 @@ def test_contacts_getter_and_setter():
     assert my_list.get_contacts == new_contacts
 
 # Add more test cases as needed
+test_add_contact()
