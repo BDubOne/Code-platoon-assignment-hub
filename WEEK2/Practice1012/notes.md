@@ -12,6 +12,38 @@ Composition. Multiple Classes.
 # Example: CarManager has a Car
 
 
+## Imposter Syndrom
+
+Software engineering is a job that involves continuous learning.
+
+*   Imposter Syndrom is a part of learning new that is hard work.
+*   feeling like a fraud
+*   feeling like/being a beginner
+*   Discomfort of not being good at something
+
+Imposter Syndrom is near-universal in tech with highly competative positions
+
+Perfectionism/defining ourselves by our work = big part of the problem
+
+Systemic biases and unconscious individual biases
+
+  * Rachel-by-the-bay Uber
+
+## Be honest about exposing ignorance
+
+## Uplift and help others
+
+
+
+
+
+
+
+
+
+
+
+
 Polymorphism follows inherited rules, but changes by case.
 
 
