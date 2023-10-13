@@ -10,3 +10,9 @@ Parent Directory.
     *   data
         *   staff.csv
         *   students.csv
+
+
+## Kwargs
+
+kwargs shortcut by searching for attributes of a class according to keys
+
