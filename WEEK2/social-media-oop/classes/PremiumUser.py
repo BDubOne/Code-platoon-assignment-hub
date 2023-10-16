@@ -1,4 +1,4 @@
-from User import User
+from classes.User import User
 
 class PremiumUser(User):
     total_premium = 0

@@ -1,6 +1,6 @@
-from User import User
-from PremiumUser import PremiumUser
-from FreeUser import FreeUser
+from classes.User import User
+from classes.PremiumUser import PremiumUser
+from classes.FreeUser import FreeUser
 
 bryan = FreeUser("Bryan", 37, "Code Platoon/Father", "email@email.com", "37373737", "Pani Puri", "Paul Foster Case")
 

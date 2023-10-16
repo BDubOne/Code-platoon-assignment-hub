@@ -1,0 +1,157 @@
+DATA STRUCTURES
+
+
+Why is it important to understand data structures?  
+
+--How data is stored affects every progrma that is written
+--base knowledge is often part of technical interviews
+
+Goals:
+
+*Basics of Data Structure and complexity analysis
+*Ability to write recursively
+
+
+How Computer Memory works: Complexity Analysis:
+
+a measure of how many individual operations it takes to complete a task, with reference to the size of the input, N
+
+How does memory work on a computer?
+
+0 1 0 1 0 0 1 0 1 0 1 = Bits
+Bits are stored in packs of 8, called Bytes.
+
+
+inside a memory slot, there is a block of memory.
+
+Within a block, is 4 Bytes (32 bits)
+
+x = 1 a variable called x with a 1 in it
+
+id(x) memory location of x within the computer Memory
+
+hex(x)
+hex(id(x)) == where the hexidecimal of my variable x is stored 
+
+Hexidecimal is base10 and consists of 16 symbols:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A=10, B=11, C=12, D=13, E=14, F=15
+
+Array as it relates to Data Structures:
+
+Data Type: practical concept in programming language designed to be maximally useful for programmer, but vary uniquely by language
+
+Data Structure is a more abstract concept that can be implemented in any language and can be thought of as pure math.
+
+Array as a structural concept does not have the capabilities of an array in js or a list in Python
+
+Abstract Array must contain items of a given type (ie int, float, str, obj)
+
+Size is set from beginning. It cannot arbitrarily grow.
+
+The reason for this is because it is represented in memory as a contiguous set of blocks
+
+in 128bit:
+
+
+Plums|Oranges|Apples|Pears|Blueberries
+
+It takes the same amount of time to access any part of RAM
+
+Compiler vs interpreter
+
+compiler: Creates a new file in assembly code, which is what the computer actually runs.
+Low lvl. Write source code. That is translated into computer language.
+Write other program that runs the computer language.
+
+In JS or Python, the interpreters work beyond the level of understanding. Black box.
+
+Premature optimization is the root of all evil
+
+index_n = start_of_array + index_desired * sizeof(datatype)
+
+nums[4] = 0 + 4 * 32 = 128
+
+LINKED LISTS*****
+
+Meant to work with non-contiguous data
+each element of a linked list is called a node. It contains a value and a pointer.
+
+ends with 0 or null.
+
+Gotta know first node in a list. Then you can go through it 
+
+Array it is clear where the next location is. 
+Linked list, you have to rely on the pointer
+
+Complexity Analysis: Time and Space
+
+****Big(O)******
+
+Web app load times over low-bandwidth connections(which is a large percentage of the world)
+
+Applications that are used by a lot of ppl(scale)
+
+
+complexity analysis: how programmers think about efficiency of a program
+
+    1. How long does program runs
+    2. How much space does it take up
+
+What do we not care about?  --real numbers and details
+
+We think about an imaginary computer running the program
+Computer science is no more about computers than astronomy is about telescopes, biology is about microscopes or chemistry is about beakers and test tubes. Science is not about tools. It is about how we use them and what we find out when we do.
+
+Edsger Dykstra
+
+Space complexity:  if this comes up, it will be in the context of in-array replacement or in-list replacement
+
+
+lets use some scientific notation to deal with big numbers.
+
+We just need to know scale, not exact numbers.
+
+its all about the N
+
+Order of magnitude...Big Oranges
+ O(1) = constant timeO(log n) = Logarithmic 
+ TimeO(n log n) = Log-Linear time
+ O(n) = Linear time
+ O(n^2) Quadratic Time
+ O(n^3), O(n^4): Polynomial
+ O(2n^2) = Extranomial
+ O(n!) = Exponential time...so so bad
+
+ binary search: grows in relation to input, but slower than input
+ Linear search: Performance worsens as fast as input grows
+
+ Merge Sort : 
+
+ Bubble sort: Nested For Loop
+
+ Naive Fibonacci:
+    recursive calling way too much
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
