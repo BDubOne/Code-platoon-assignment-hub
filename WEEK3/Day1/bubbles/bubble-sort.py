@@ -15,7 +15,7 @@ def bubble_swap(arr):
             swaps += 1
     print(f'{swaps} swaps')
     print(f'result: {arr}')
-bubble_swap(arr)
+# bubble_swap(arr)
         
     
 
@@ -41,7 +41,7 @@ def big_bubble_swap(arr):
     print(f"Sorted array: {arr}")
     print(f"Swaps: {swaps}")
 
-# big_bubble_swap(arr)
+big_bubble_swap(arr)
 
 def sorting(arr):
     print(f"Initial array: {arr}")
