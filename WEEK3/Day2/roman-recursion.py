@@ -1,19 +1,34 @@
-# def roman_recursion(num):
-    # if num == 1:
-    #     return "I"
+def roman_calc(num):
+    if num == 1:
+        return "I"
+    ordered_numerals = [
+    {"a" : 1000, "r": "M"},
+    {"a" : 900, "r": "CM"},
+    {"a" : 500, "r": "D"},
+    {"a" : 400, "r": "CD"},
+    {"a" : 100, "r": "C"},
+    {"a" : 90, "r": "XC"},
+    {"a" : 50, "r": "L"},
+    {"a" : 40, "r": "XL"},
+    {"a" : 10, "r": "X"},
+    {"a" : 9, "r": "IX"},
+    {"a" : 5, "r": "V"},
+    {"a" : 4, "r": "IV"},
+    {"a" : 1, "r": "I"},
+    ]   
 
         
-    
-    # for idx in ordered_numerals:
-    #     numeral = idx['r']
-    #     val = idx['a']
+    result ='' 
+    for idx in ordered_numerals:
+        numeral = idx['r']
+        val = idx['a']
          
-    #     if  num >= val:
-    #         times = num//val
-    #         result += numeral* times
-    #         num -= (val*times)
-    # return result
-   
+        if  num >= val:
+            times = num//val
+            result += numeral* times
+            num -= (val*times)
+    return result
+print(roman_calc(3494))
 def roman_recursion(num, ordered_numerals):   
  
 
