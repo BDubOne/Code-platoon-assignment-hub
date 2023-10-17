@@ -1,0 +1,8 @@
+Data Structure: Stack
+
+LIFO: Last in First out
+
+putting item on top: push
+removing item: pop
+
+
