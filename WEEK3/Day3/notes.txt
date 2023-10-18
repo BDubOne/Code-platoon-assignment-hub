@@ -1,0 +1,14 @@
+API: Application Programming Interface
+
+The way programs talk to each other is, quite simply an API. This word becomes used in a more specific way when web applications are involved
+
+Ques:
+
+queues work in FIFO: First In First Out
+
+stacks work in LIFO: Last IN LAST OUT
+
+Qeues need to add an item to the beginning, return an item from the the end
+and peek
+
+
