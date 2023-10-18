@@ -9,5 +9,6 @@ class LinkedList:
     def __init__(self):
         pass
 
-    def insert(self,node):
+    def insert(self,node, position=None):
+        
         self.append(node)
