@@ -27,7 +27,7 @@ class LinkedList:
         """insert value as new node into list"""
         current = self.head
         while(current is not None):
-            print(current)
+            print(current.value)
             current = current.next #At the end of the list, current.next is None, so current is set to NNone
         
 
@@ -35,14 +35,12 @@ class LinkedList:
         """find a node in the list with 'value'"""
 
 test_node = Node("hello world")
-print(test_node.value)
-print(test_node.next)
 my_list = LinkedList()
+
 
 user = {"name": "Alice", "email": "alice@gmail.com"}
 my_list.insert(user)
 my_list.insert("hello world")
 my_list.insert("goodbye")
-print(my_list.head.value)
-print(my_list.head.next.value)
-print(my_list.head.next.next.value)
+
+my_list.print_all_items_in_list()
