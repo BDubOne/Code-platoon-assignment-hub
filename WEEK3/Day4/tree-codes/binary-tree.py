@@ -41,6 +41,7 @@ class BinaryTree:
     def dfs(self):
         print(self.value)
         if self.left:
+        
             self.left.dfs()
         if self.right:
             self.right.dfs()
@@ -73,7 +74,27 @@ class BinaryTree:
             return found_right
         else:
             return None
+
+    @staticmethod
+    def binary_tree_insert(tree, new_value):
+        if tree is None:
+            return BinaryTree(new_value)
         
+        if new_value < tree.value:
+            print(f'new_value: {new_value} < {tree.value}. Going left')
+            if tree.left is None:
+                tree.left = BinaryTree(new_value)
+
+            else:
+                return BinaryTree.binary_tree_insert(tree.left, new_value)
+        else:
+            print(f"new_value {new_value} >= {tree.value}. Going right")
+            if tree.right is None:
+                tree.right = BinaryTree(new_value)
+            else:
+                return BinaryTree.binary_tree_insert(tree.right, new_value)
+
+        return tree        
         
         
     
@@ -117,3 +138,8 @@ tree = BinaryTree(
 # # print(BinaryTree.find_in_tree(myTree, 22))
 print(BinaryTree.find_in_tree(myTree, 77))
 print(BinaryTree.find_in_tree(myTree, 1000))
+print(BinaryTree.binary_tree_insert(myTree,33))
+print(BinaryTree.binary_tree_insert(myTree, 44))
+print(BinaryTree.binary_tree_insert(myTree,22))
+print(BinaryTree.binary_tree_insert(myTree,30))
+print(myTree)

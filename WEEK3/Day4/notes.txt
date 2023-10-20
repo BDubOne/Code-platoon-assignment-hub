@@ -1,0 +1,3 @@
+Trees are all over the place
+
+Binary Tree consists of Left, Right and Mid.
