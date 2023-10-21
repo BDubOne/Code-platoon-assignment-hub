@@ -1,0 +1,63 @@
+#tech interview
+
+Software engineering and writing programs is a lot of fun. It is also a lot of work.
+
+most types of engineers have a certification test for being a professional engineer.
+
+CS degree does not mean a good programmer.
+
+Guild system of junior, mid, senior.
+
+
+Learning happens on the job
+
+
+Interviews are auditions.
+
+Upfront, there may be a coding challenge on leetcode.
+
+then either a technical conversation or a live tech interview or a code review. There could be also a whiteboarding problem.
+
+After first round, there is maybe a second one that could involve a weekend project.
+
+After that, probably a behavioral interview
+
+At the end, if you're in the running, there is a final interview where you can ask questions about the company and career growth.
+
+
+Interview process is often about whiteboarding a problem more than it is about solving a problem with 
+
+1. Read question out loud.
+
+    - Ask questions along the way. Don't make assumptions.
+    -Take notes:
+        -Inputs
+        -Outputs
+        -Edge-cases
+
+2. Pseudocode for simplest case solution.
+    -simple fake data to use for Pseudocode
+
+3. Talk through pseudocode algorithm for fake data
+
+4. Ask interviewer if they have any thoughts and if that makes sense.
+    -you are working together on this problem.
+    -You are explaining your approach to see if you are missing anything.
+    -This also gives them a chance to hint whether you might be missing something
+
+5. Implement! Write code for simplest case solution.
+    -run code often as you go
+    -work in very small chunks
+    -Keep talking while you work.
+    -explain stuck point
+
+6.  Expand on code. Make it a full/complete solution
+
+7. Final checklist--list of edgecases also:
+    -what does the problem want as output?
+    -any other gotchas?
+
+8. Talk through solution with interviewer
+
+
+
