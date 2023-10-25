@@ -1,0 +1,15 @@
+It's time to make a flask full of data and tip it for the homies!
+
+
+What is a webserver?
+what is flask?
+what is a flask server?
+
+
+HTML is front-end: what the user sees and interacts with
+SQL/RDBMs is back-end: user does not directly interact with it
+
+flask server is also back-end: accepts requests from front end and returns responses to front-end.
+
+JSON interacts with the native JSON
+Javascript manipulates DOM: Documnet Object Model
