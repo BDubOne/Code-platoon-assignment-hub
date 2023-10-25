@@ -1,3 +1,37 @@
 #RDBMS
 Relational Database Management system
 
+Postgres is a popular RDBM. It uses sql and is able to return data to individual developers.
+
+We can hook it to back-end servers and run python programs that run it
+
+
+No capital leters when making databases.
+
+\d --relationships
+
+CREATE DATABASE students;
+
+\c connnect
+\c students (connect to student database I just made)
+
+CREATE TABLE student (
+    id serial PRIMARY KEY,
+    first_name VARCHAR (20), --VARCHAR saves the amount of space in parentheses and allows an input of up to that amount.
+    last_name VARCHAR (20),
+    age INT,
+    grade CHAR (1)); ==CHAR demands the amount of characters in the ()
+
+    COPY
+
+    \l ---reveal what databases are available
+    \c --connect to particular Database
+    ctrl c exits to restart if I make a mistake
+    ; --closes a command
+
+    COPY student from '<absolutepath>' DELIMITER ',' CSV HEADER;
+
+    SELECT * FROM student; --print all 
+
+
+
