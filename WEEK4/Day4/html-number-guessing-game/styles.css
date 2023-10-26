@@ -1,0 +1,35 @@
+/* styles.css */
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  text-align: center;
+ 
+}
+header {
+  background-image: url('https://cdn.pixabay.com/photo/2015/12/13/09/40/banner-1090830_1280.jpg');
+  
+  width: 100%;
+  height: 50%;
+  align-content: center;
+  justify-content: center;
+
+  
+}
+
+h1 {
+  font-weight: 2000;
+  text-decoration: strong;
+  color:  darkblue;
+  justify-self: center;
+
+}
+
+main {
+  background-color: lightyellow;
+  display: flexbox;
+  border: 1px solid;
+}
+
+#thinker img {
+height: 300px;
+}
