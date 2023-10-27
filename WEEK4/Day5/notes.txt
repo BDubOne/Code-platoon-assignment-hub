@@ -77,5 +77,20 @@ Data is served
 
 HTTP is everywhere!!!!!!!!
 
+WHAT IS API?  Application Program Interface::
+
+A way to set up communication between server and client.
+
+Client goes to restaurant.
+Table is computer:
+Cooks are in the back making food. this is the server:
+Fridge is the database:
+
+cooking it is formatting the data:
+
+server brings it through the API.
+API is the waiter.
+
+
 
 

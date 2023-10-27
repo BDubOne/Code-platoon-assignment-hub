@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS students, teachers, subjects;
 
 CREATE TABLE subjects(
     id serial PRIMARY KEY,
-    subject VARCHAR(25)
+    subject VARCHAR(50)
 );
 COPY subjects FROM '/Users/bryanbartell/Desktop/code-platoon/Assignments/WEEK4/flask_postgres_school/data/subjects.csv' DELIMITER ',' CSV HEADER;
 
