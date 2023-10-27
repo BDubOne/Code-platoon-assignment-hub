@@ -42,8 +42,8 @@ class Student(db.Model):
     last_name = db.Column(db.String(20))
     age = db.Column(db.Integer)
     subject_id = db.Column(db.Integer, db.ForeignKey('subjects.id'))
-    # subject_relation = db.relationship('Subject', foreign_keys=[subject])
-    # teacher_relation = db.relationship('Teacher', seconday='subject_teacher_association', viewonly=True)
+    subject_relation = db.relationship('Subject', foreign_keys=[subject])
+    teacher_relation = db.relationship('Teacher', seconday='subject_teacher_association', viewonly=True)
 
     @property
     def subject_name(self):

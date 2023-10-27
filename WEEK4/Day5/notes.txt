@@ -54,3 +54,28 @@ Status codes:
 404: not found
 500: internal server error --server problem
 
+When a user is browsing a typical website, ther will be hundreds or dozens of http conversations.
+
+check network tab to check if you think you are talking to your server, but you aren't
+
+HTTP is stateless.  Every conversation shares no state with any previous conversation.
+
+Evey http conversation begins with a new connection from the client ot he server. It's as if the two parties are meeting for the first time. Even requests just modments before have no bearing on the current request.
+
+Server State:
+
+Most servers clear all state variables with each request. this means all state when processing a request comes from the request itself.
+
+STATELESS??
+
+HTTP cookes help retain state like "who isl ogged in" or "what was their last search" accross multiple requests.  
+
+This is how cookies are implemented:
+Server requests authentication
+Client provides token
+Data is served
+
+HTTP is everywhere!!!!!!!!
+
+
+
