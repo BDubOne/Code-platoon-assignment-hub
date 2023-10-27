@@ -1,0 +1,56 @@
+HTTP protocol was originlly designed for transmitting hypertext.
+
+Modern equivalent of hypertext is html
+
+HTTP transmits html, css, api responces, javascript and quite a few other things.
+
+PUT, POST, DELETE, GET
+
+Get request recieves a response:
+
+ie: 200 OK HTTP/1.1
+
+Content-length: 424
+
+GET -Retrieve a resource
+Post: send a resource
+Put: update resource
+Delete: delete a resource
+
+GET / <uri name>  HTTP/ 1.1
+
+URN has a Host + uri
+URL has a Protocol + Host + uri
+
+Request format:
+
+Request line (get-request)
+
+Header:
+Host:
+User0Agent:
+
+query=new+jordans&color=red
+
+Request Headers provide additional contetxt about the request.
+
+Host tells the web server which domain the client is requesting content from. Often one web server will serve content for multiple domains, sometimes called virtual hosts. The server uses this header to determine which content to serve.
+
+Accept-language: en::::The client lets the server know which languages it prefers the response be sent back in.
+
+User-Agent:  which type of client sent this request. Sometimes the server will respond differently based on the UA field.
+
+Accept: text/html, text/plain:  Is this client recieving html or json?
+
+
+Responses also have headers:  Length, date, content-type
+
+Status codes:
+
+200: OK
+302: See other --endpoint doesn't exist. Go here instead <!>
+400: bad request  --client problem
+401: unauthorized
+404: not found
+500: internal server error --server problem
+
