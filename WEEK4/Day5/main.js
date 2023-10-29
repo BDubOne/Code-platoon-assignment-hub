@@ -1,5 +1,5 @@
 
-//Reques EXAMPLE
+//Request  EXAMPLE
 const sendARequest = () => {
     let request = (method = 'POST', endpoint ="app/students", data= {
         'first_name': 'Bryan',
