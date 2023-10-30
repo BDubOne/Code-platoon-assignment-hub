@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -32,7 +32,7 @@ function App() {
 
   }
 
-  const toggleCompletion = (taskId) => {
+  const markComplete = (taskId) => {
     setTasks(prevTasks =>
       prevTasks.map(task =>
         task.id === taskId ? {...task, completed: !task.completed } : task
@@ -59,7 +59,7 @@ function App() {
             <input
             type="checkbox"
             checked={task.completed}
-            onChange={()=> toggleCompletion(task.id)}
+            onChange={()=> markComplete(task.id)}
             />
             {task.text}
             <button onClick={() => removeTask(task.id)}>Remove</button>
