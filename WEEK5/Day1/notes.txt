@@ -19,3 +19,20 @@ Dependencies:
 axios, for instance, and jest
 
 If you want to use an import instead of require, you need to set a "type": "module"
+
+REACT!
+
+What is react??
+It is a magical library:
+
+A front-end framework developed by Facebook and made open-source
+By getting a bunch of developers to interact with it, it has had a history of lots of refactoring and debugging from many sources (like linux)
+
+React: html/css
+React Native: tags belonging to phone development.
+
+
+Vite?
+Vite takes react application and compiles it, also rendering it into a development server
+
+create a utilities.jsx file and make hooks
