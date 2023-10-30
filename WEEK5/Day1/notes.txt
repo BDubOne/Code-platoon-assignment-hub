@@ -1,0 +1,21 @@
+Npm: Node Package Manager
+
+Node--framework through which we run js
+
+We can alter npm based on which project we are doing and what behavior we want it to follow.
+
+--Commands---
+
+npm -v  (shows latest version)
+
+npm init (initializes npm and makes a package.json file)
+
+npm init -y (say yes to all)
+
+licenses: ISC, MID, Apache2.0
+
+Dependencies:
+
+axios, for instance, and jest
+
+If you want to use an import instead of require, you need to set a "type": "module"
