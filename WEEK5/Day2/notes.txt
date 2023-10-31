@@ -1,0 +1,4 @@
+When you work with react, you have a DOM (what appears on the screen)
+and a Virtual DOM (What your code says)
+
+The changes to the DOM are made whenever you make a change relating to state
