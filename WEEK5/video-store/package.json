@@ -1,14 +1,17 @@
 {
+  "type": "module",
   "name": "video-store",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "date-fns": "^2.30.0",
     "uuid": "^9.0.1"
   }
 }
