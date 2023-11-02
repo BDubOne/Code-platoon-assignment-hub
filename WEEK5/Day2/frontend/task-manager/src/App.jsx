@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+
+import Task from "./Task.jsx"
 
 import jsonTasks from "../tasks.json"
 
@@ -11,6 +13,8 @@ function App() {
 
   const [tasks, setTasks] = useState(jsonTasks);
   const [formInput, setFormInput] = useState("");
+
+  // const [show, setShow] = useState(false)
  
 
   const formSubmit = (e) => {
@@ -19,12 +23,20 @@ function App() {
     setTasks([...tasks, newTask])
       setFormInput("")
   }
+  // useEffect(()=>{
+  //   if (show) {
+  //     alert("hello")
+  //   }
+  //   else{
+  //     alert("goodbye")
+  //   }
+  // }, [show])
   
+
 
   return (
     <>
-    {/* <div id="greeting"> {hello}</div>
-    <button onClick ={()=>setHello("Goodbye Victor")}>Click Me</button> */}
+   
     <form onSubmit={(e) => formSubmit(e)}>
       <input placeholder="enter task"
       value={formInput}
@@ -34,9 +46,8 @@ function App() {
       <button type="submit">Submit</button>
     </form>
      <ol>
-      {tasks.map((task) => {
-        return <li key={task.id}>{task.task}</li>
-      })}
+      {/* {tasks.map((task) => {
+      Task */}
      </ol>
     </>
   

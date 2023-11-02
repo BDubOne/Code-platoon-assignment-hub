@@ -1,0 +1,7 @@
+inline-block allows items to take up all the space they need from left to right,
+but makes them also occupy their own column
+
+
+float: right; makes something position itself to the left of anything else in ites parent division
+
+overflow: define overflow-y or overflow-x.  Scroll;

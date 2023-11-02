@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+#header{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  border: 1px solid black;
+  padding-bottom: 160px;
+}
+
+#headnav1 {
+  width: 98vw;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1.5%;
+
+
+}
+
+.navitems {
+  border: 1px solid black;
+  padding: 1.5%;
+}
+
+#headnav2 {
+  width: 98vw;
+  height: 5vh;
+  display:flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+}
+
+.name {
+  margin-left: 3%;
+  float: left;
+  font-weight: bold
+}
+
+.gender{
+  font-style: italic;
+}
+
+.jobs{
+  margin-left: 3%;
+ 
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#left-side{
+  width: 60vw;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#left-head {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#left-nav{
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid black;
+ 
+}
+
+#left-head-imgs {
+  padding: 20px;
+  margin-left: 5%;
+  justify-content: space-between;
+}
+#bizcard{
+  flex: 1;
+  display: flex;
+  border:1px solid black
+}
+#biztext {
+  width: 60%;
+}
+
+#address{
+  float:left;
+  margin-left: 3%;
+}
+#schools{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10%;
+}
+
+.school{
+  padding: 10px;
+  
+}
+
+.inline {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1.5%;
+  margin-left: 3%;
+}
+
+.floatleft{
+  float:left;
+}
+.grey{
+  color: gray;
+}
+
+.leftbox{
+  margin: 2%;
+  border: 1px solid black;
+}
+#creation{
+  align-items:baseline;
+  justify-content:start;
+}
+
+/* .midbox{
+  margin: 2%;
+  border: 1px solid black;
+} */
+
+.rightbox{
+  flex: 1;
+  float:right;
+}
+#right-side{
+  margin-right: 2%;
+  width: 35vw;
+  display:flex;
+  border:1px solid black;
+  flex-direction: column;
+}
+
