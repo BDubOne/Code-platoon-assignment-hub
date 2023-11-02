@@ -140,8 +140,43 @@ function App() {
               <button>Off</button>
 
              </div>
+        </div>
+        <div className="leftbox" id="about">
+          <h2>About</h2>
+          <p>I am a lifelong student with a natural leadership style that allows me to effortlessly collaborate with teams, fostering a proactive mindset. With diverse experiences in theology, arts, and holistic healing, my passion lies at the intersection of technology and promoting human well-being. Currently enrolled at Code Platoon, I am diving deeper into the realms of Python, Django, SQL, React, and more, ready to apply these skills to foster technological innovation. As a certified Qigong instructor, I incorporate mindfulness in all that I do, ensuring that my solutions are not only effective but also nurture the human spirit. This unique combination of skills makes me an ideal fit for any socially-conscious software company.</p>
+          <div className="leftbox">
+            <img className="floatleft" src="#"/>
+            <h3>Top Skills</h3>
+            <ul id="skill-list"className="inline">
+              <p>JavaScript</p>
+              <li>Python</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+        <div id="activity" className="leftbox">
+          <div className="columnbox">
+            <h2>Activity</h2>
+            <a href="#">50000 followers</a>
+            <h3>You havent posted yet</h3>
+            <p>Posts you share will be displayed here.</p>
+
+
+          </div>
+          <div class="createpost">
+          <button class="floatleft">Create a post</button>
+          <img src="#" alternatetext="pencil"/>
+          </div>
+          <div className="inline">
+          <h3 className="grey">Show all activity --</h3>
+        
+          </div>
+
 
         </div>
+       
+
+        
 
       </div>
       <div id="right-side">
