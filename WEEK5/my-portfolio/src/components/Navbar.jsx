@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [activeSection, setActiveSection] = useState('home')
@@ -7,44 +8,44 @@ function Navbar() {
         <nav className="nav">
             <ul>
                 <li>
-                    <link to="/"
+                    <Link to="/"
                     className={activeSection === 'home' ? 'active' : ''}
                     onClick={() => setActiveSection('home')}
                     >
                         Home
-                    </link>
+                    </Link>
                 </li>
                 <li>
-                    <link to="/about"
+                    <Link to="/about"
                     className={activeSection === 'about' ? 'active' : ''}
                     onClick={() => setActiveSection('about')}
                     >
                         About
-                    </link>
+                    </Link>
                 </li>
                 <li>
-                    <link to="/portfolio"
+                    <Link to="/portfolio"
                     className={activeSection === 'portfolio' ? 'active' : ''}
                     onClick={() => setActiveSection('portfolio')}
                     >
                         Portfolio
-                    </link>
+                    </Link>
                 </li>
                 <li>
-                    <link to="/gratitude"
+                    <Link to="/gratitude"
                     className={activeSection === 'gratitude' ? 'active' : ''}
                     onClick={() => setActiveSection('gratitude')}
                     >
                         Gratitude
-                    </link>
+                    </Link>
                 </li>
                 <li>
-                    <link to="/contact"
+                    <Link to="/contact"
                     className={activeSection === 'contact' ? 'active' : ''}
                     onClick={() => setActiveSection('contact')}
                     >
                         Contact
-                    </link>
+                    </Link>
                 </li>
             </ul>
         </nav>

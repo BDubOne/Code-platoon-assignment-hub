@@ -1,0 +1,19 @@
+Tailwind with Vite: 
+ npm install -D tailwindcss postcss autoprefixer
+
+ npx tailwindcss init -p
+
+ @tailwind base;
+@tailwind components;
+@tailwind utilities
+
+
+Bootstrap:
+
+components:
+
+Accordion
+dropdowns
+navbars with dropdownsresponsive navbars
+
+ npm install react-bootstrap bootstrap

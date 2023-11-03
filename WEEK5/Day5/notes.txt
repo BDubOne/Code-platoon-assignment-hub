@@ -1,0 +1,11 @@
+types of test:
+
+unit test:  (functional or component isolated) -- super fast, cheap, not effective for fullstack applications
+
+integration test (API Call [back-end server]) --takes more time (asynchronous functions), not cheap, effective
+
+e2e test: behavior from when a browser is open to the visit to the interaction to the engagement with any back-end servers - to what the user sees on the page
+very expensive. very effective
+
+What to write tests for:
+    ...
