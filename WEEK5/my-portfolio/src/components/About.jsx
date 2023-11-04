@@ -2,9 +2,12 @@ import Header from './Header';
 
 function About() {
     return (
-        <Header title="About Me" subtitle="Mission Statement">
+        <Header 
+        title="About Me" 
+        subtitle="Mission Statement"
+        >
             <p>
-            Bryan Bartell is a dedicated professional with diverse experiences ranging from theology to web development. As a certified Qigong instructor, Bryan harnesses the principles of holistic well-being and integrates them into the world of software design and development. His background in Intercultural Studies and Communications from Kuyper College, combined with his current endeavors at Code Platoon, where he's diving deep into Python, Django, SQL, React, and other technologies, makes him a unique asset. Bryan’s proactive mindset, coupled with his passion for nurturing great ideas, positions him as an ideal fit for any socially-conscious software company.
+            In a rapidly evolving digital landscape, I am committed to harnessing the power of technology to enhance human well-being and promote lifelong learning. Drawing from diverse experiences in theology, arts, and holistic healing, I aim to create innovative software solutions that celebrate the intersection of language, mathematics, and art. By leveraging coding as a universal language, I aspire to build bridges among diverse communities, ensuring that technology enriches the human experience, rather than compromising it.
             </p>
 
         </Header>

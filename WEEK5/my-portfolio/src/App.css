@@ -1,26 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-.project-table {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.project-item {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  text-align: center;
-}
-
-.project-item img {
-  max-width: 100%;
-  height: auto;
-}
-
-.nav a.active {
-  color: #ddd;
-  font-weight: bold;
-}
 

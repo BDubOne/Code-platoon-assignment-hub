@@ -1,18 +1,31 @@
 import Header from './Header';
+import Project from './Project';
+
+
+const projects = [
+    {
+    title: "Task Manager: Squash the Beef",
+    description: ["This is a simple task-manager app.","Create a Task.","View Tasks.", "Mark Complete.","Remove a Task.", "Features for tracking and timebanking coming soon!"],
+    imageUrl: "../assets/Screenshot 2023-11-03 at 7.48.11 PM.png",
+    techStack: ['HTML', 'CSS', 'JavaScript', 'React'],
+    link: 'https://bejewelled-pothos-3e6957.netlify.app/'
+    
+
+}
+];
 
 
 function Portfolio() {
     return (
-        <Header title="Portfolio" subtitle="Some of my recent projects">
-            <div className="project-table">
-                {Array(6).fill().map((_, index) => (
-                    <div key={index} classname="project-item">
-                        <img src="#" alt={`Project ${index + 1}`}/>
-                        <p> Project {index + 1} Description</p>
+       <div className="portfolio">
+            <h2>Portfolio</h2>
+            <div className="project-list">
+                {projects.map((project, idx) => (
+                    <Project key={idx} {...project} />
+
+                ))}               
             </div>
-                ))}
-            </div>
-        </Header>
+       </div>
     );
 }
 

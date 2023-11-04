@@ -1,7 +1,7 @@
 
 function Header ({ title, subtitle, children}) {
     return (
-        <div className ="header">
+        <div className ="background">
             <h1 id="title">
                 {title}
                 </h1>

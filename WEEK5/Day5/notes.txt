@@ -8,4 +8,28 @@ e2e test: behavior from when a browser is open to the visit to the interaction t
 very expensive. very effective
 
 What to write tests for:
-    ...
+    ...important to functionality
+    ...important to business
+
+cons:
+takes time to write the test
+takes time to understand errors
+more code involved: pretty much double
+test could have an error
+
+pros:
+saves time debugging
+
+
+What is TDD?
+Writing the tests first
+
+For REACT, we use Cypress and puppeteer
+
+for Django, we use native tests for both REST frameworks and for the actual tests
+
+cypress:
+
+ npm install cypress --save-dev
+
+ npx cypress open

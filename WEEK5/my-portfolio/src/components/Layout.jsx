@@ -1,10 +1,13 @@
 import Header from './Header';
-function Layout({ children}) {
+import NavBars from './Navbar';
+
+function Layout({ title, subtitle, children}) {
     return (
         <>
-        <Header title="Default Title" subtitle="Default Subtitle"/>
+        <NavBars />
+        <Header title= {title} subtitle = {subtitle} />
         <main>{children}</main>
-        <footer>Default</footer>
+        <footer>Default Footer</footer>
         </>
     )
 }
