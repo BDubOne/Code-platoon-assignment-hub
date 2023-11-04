@@ -6,7 +6,7 @@ const projects = [
     {
     title: "Task Manager: Squash the Beef",
     description: ["This is a simple task-manager app.","Create a Task.","View Tasks.", "Mark Complete.","Remove a Task.", "Features for tracking and timebanking coming soon!"],
-    imageUrl: "../assets/Screenshot 2023-11-03 at 7.48.11 PM.png",
+    imageUrl: "./src/assets/task-manager-screenshot.png",
     techStack: ['HTML', 'CSS', 'JavaScript', 'React'],
     link: 'https://bejewelled-pothos-3e6957.netlify.app/'
     
