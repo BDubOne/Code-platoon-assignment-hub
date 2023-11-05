@@ -6,8 +6,12 @@ function Layout({ title, subtitle, children}) {
         <>
         <NavBars />
         <Header title= {title} subtitle = {subtitle} />
-        <main>{children}</main>
-        <footer>Default Footer</footer>
+        <main>
+            {children}
+        </main>
+        <footer>
+            Default Footer
+        </footer>
         </>
     )
 }

@@ -1,4 +1,4 @@
-import { BrowserRouter, Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
 import Layout from './components/Layout';
 import About from './components/About';
@@ -6,14 +6,51 @@ import Home from './components/Home';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Gratitude from './components/Gratitude';
-import Navbars from './components/Navbar';
+import axios from 'axios';
+
+import { useState, useEffect } from 'react'
+
 
 function App() {
 
-  //usestates
-  //useeffect for each api I pull from
-  //pass down properties to whatever component utilizes the api
+  const [userProfiles, setUserProfiles] = useState([]);
 
+
+  useEffect(() => {
+    
+    const gitHubUserNames = [
+      'adamcee',
+      'blackrebelradio1992',
+      'chadeqmartin',
+      'andrew-hagstrom',
+      'CustomDesignBuildStudios',
+      'dekodac',
+      'fravila08',
+      'PradoJohn',
+      'Ickarus75',
+      'jminchew97',
+      'matthew-peterson-39',
+      'Poleron402',
+      'seanmac-dev',
+      'theQuiltingRiverOtter',
+      'zimmermantr',
+      'MrGmo'
+    ];
+
+    const getGithubProfiles = async() => {
+      try {
+        const profiles = await Promise.all(gitHubUserNames.map(async username => {
+          const response = await axios.get(`https://api.github.com/users/${username}`);
+          return response.data;
+        }));
+        setUserProfiles(profiles);
+      } catch (error) {
+        console.error('Error fetching profiles', error);
+      }
+    }
+
+    getGithubProfiles();
+  }, []);
   
   return (
   <BrowserRouter>
@@ -24,18 +61,18 @@ function App() {
         </Layout>
       } />
       <Route path="/about" element={
-        <Layout>
+        <Layout title="About Me" subtitle="In a rapidly evolving digital landscape, I am committed to harnessing the power of technology to enhance human well-being and promote lifelong learning. Drawing from diverse experiences in theology, arts, and holistic healing, I aim to create innovative software solutions that celebrate the intersection of language, mathematics, and art. By leveraging computer science as a universal language, I aspire to build bridges among diverse communities, ensuring that technology enriches the human experience, rather than compromising it.">
           <About />
         </Layout>
       } />
       <Route path="/portfolio" element={
-        <Layout>
+        <Layout title="My Projects" subtitle="deployed through netlify!">
           <Portfolio />
         </Layout>
       } />
       <Route path="/gratitude" element={
-        <Layout>
-          <Gratitude />
+        <Layout title="Gratitude">
+          <Gratitude userProfiles={userProfiles} />
         </Layout>
       } />
       <Route path="/contact" element={

@@ -4,7 +4,7 @@ import Project from './Project';
 
 const projects = [
     {
-    title: "Task Manager: Squash the Beef",
+    title: "Task Manager",
     description: ["This is a simple task-manager app.","Create a Task.","View Tasks.", "Mark Complete.","Remove a Task.", "Features for tracking and timebanking coming soon!"],
     imageUrl: "./src/assets/task-manager-screenshot.png",
     techStack: ['HTML', 'CSS', 'JavaScript', 'React'],
