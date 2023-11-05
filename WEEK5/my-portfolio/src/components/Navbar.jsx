@@ -29,10 +29,10 @@ function Navbars() {
                             <NavDropDown.Item as={Link} to="/portfolio">
                                 All Projects
                             </NavDropDown.Item>
-                            <NavDropDown.Item as={Link} to="/task-manager">
+                            <NavDropDown.Item as={Link} to="https://bejewelled-pothos-3e6957.netlify.app/">
                                 Task Manager
                             </NavDropDown.Item>
-                            <NavDropDown.Item as={Link} to="/whackamole">
+                            <NavDropDown.Item as={Link} to="https://iridescent-lebkuchen-d27d22.netlify.app/">
                                 Whack a Mole
                             </NavDropDown.Item>
                             

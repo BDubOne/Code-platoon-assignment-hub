@@ -11,6 +11,15 @@ const projects = [
     link: 'https://bejewelled-pothos-3e6957.netlify.app/'
     
 
+},
+{
+    title: "Whack a Mole",
+    description: ["This is a simple task-manager app.","Create a Task.","View Tasks.", "Mark Complete.","Remove a Task.", "Features for tracking and timebanking coming soon!"],
+    imageUrl: "./src/assets/whack-a-mole.png",
+    techStack: ['HTML', 'CSS', 'JavaScript', 'React'],
+    link: 'https://iridescent-lebkuchen-d27d22.netlify.app/'
+    
+
 }
 ];
 

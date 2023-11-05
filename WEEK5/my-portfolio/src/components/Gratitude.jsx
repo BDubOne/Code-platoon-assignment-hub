@@ -1,6 +1,4 @@
-import Header from './Header';
-import { useState, useEffecct } from 'react';
-import { Card } from 'react-bootstrap';
+
 import Carousel from 'react-bootstrap/Carousel';
 
 
@@ -9,15 +7,7 @@ function Gratitude({ userProfiles} ) {
 
     return (
       <>
-      
-            <p>
-                I am deeply grateful for the unwavering support of my wife, Anne Bartell, my family, my mentor, Roque Mesa, as well as my instructors, TAs and classmates at Code Platoon who have been so generous with their wisdom, experience, time and talent. 
-                <br/>
-                <br/>
-                Every success I have had is a direct result of the help I have received.
-            </p>
-      
-           
+     
         <main>
              <h3>
                 Organizations

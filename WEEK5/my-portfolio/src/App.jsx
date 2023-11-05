@@ -71,7 +71,8 @@ function App() {
         </Layout>
       } />
       <Route path="/gratitude" element={
-        <Layout title="Gratitude">
+        <Layout title="Gratitude" subtitle="I am deeply grateful for the unwavering support of my wife, Anne Bartell, my family, my mentor, Roque Mesa, as well as my instructors, TAs and classmates at Code Platoon who have been so generous with their wisdom, experience, time and talent. 
+        Every success I have had is a direct result of the help I have received.">
           <Gratitude userProfiles={userProfiles} />
         </Layout>
       } />
