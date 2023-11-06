@@ -91,3 +91,20 @@
   display: flex;
   
 }
+
+#title {
+  margin-left: 5%;
+}
+
+#sub-title{
+  margin: 5%;
+}
+
+main {
+  margin: 5%;
+}
+
+footer {
+  margin-right: 5%;
+  text-align: end;
+}

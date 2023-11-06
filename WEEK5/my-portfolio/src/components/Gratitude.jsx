@@ -46,7 +46,7 @@ function Gratitude({ userProfiles} ) {
         </h3>
         <Carousel>
             {userProfiles.map(profile => (
-            <Carousel.Item key="{profile.id}">
+            <Carousel.Item classname="max-h-40" key="{profile.id}">
                 <a href={profile.html_url} target="_blank" rel="noopener noreferrer">
                     <img 
                     className="d-block w-100"

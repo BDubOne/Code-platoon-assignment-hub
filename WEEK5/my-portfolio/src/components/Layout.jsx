@@ -10,7 +10,11 @@ function Layout({ title, subtitle, children}) {
             {children}
         </main>
         <footer>
-            Default Footer
+            <p>
+                Created By  
+                <a href="mailto:bryan.t.bartell@gmail.com"> Bryan Bartell </a> 
+                2023
+            </p>
         </footer>
         </>
     )
