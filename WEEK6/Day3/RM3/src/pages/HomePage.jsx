@@ -1,17 +1,14 @@
 const HomePage = () =>{
     return (
-        <div id="home-page">
-            <h2>RickAndMortyVerse</h2>
-            <div>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur minus doloribus unde commodi quidem optio deserunt voluptas cum enim, ad molestiae tenetur quam temporibus hic aperiam culpa reiciendis, magnam laboriosam.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, quae iste suscipit, nemo magnam fugit doloribus esse perspiciatis deleniti ratione ut quidem aut excepturi voluptas animi qui sunt, eum unde?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis aperiam ut facere sit cumque in laboriosam. Sint doloremque omnis laboriosam corporis facilis ut atque dolor, ea animi itaque delectus vel.
-                </p>
-
-            </div>
-
+        <>
+        <div className="min-h-screen flex flex-col items-center justify-center relative">
+          <img className="portal" src="./src/assets/portal.svg" alt="Portal" />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <img className="max-w-full max-h-50" src="./src/assets/rickymort.svg" alt="Rick and Morty" />
+          </div>
         </div>
+  
+        </>
     )
     
     }

@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
-function CharCard({id, name, image, favorites, setFavorites}) {
+function CharCard({id, name, image, status, favorites, setFavorites}) {
     const navigate= useNavigate()
     const [isFavorite, setIsFavorite] = useState(false)
 
@@ -38,8 +38,7 @@ function CharCard({id, name, image, favorites, setFavorites}) {
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
+          {status}
         </Card.Text>
         <Button variant="primary" onClick={()=>navigate(`/character/${id}/`)}>Get Shwifty</Button>
         <Button variant="warning" onClick={()=>{isFavorite? removeFavorite(): addToFavorites()}}>
