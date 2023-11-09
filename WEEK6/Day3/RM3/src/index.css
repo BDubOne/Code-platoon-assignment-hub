@@ -3,22 +3,26 @@
 @tailwind utilities;
 
 #root {
-    background-image: url("./src/assets/background.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-size:cover;
-    background-repeat: no-repeat;
+    
     height: 100%;
     width: 100%;
 }
+.container #app-container {
+    background-color: dark blue;
+}
 #Navbar{
     position: sticky;
+}
+
+#homepage {
+    color: limegreen
 }
 .row {
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 0;
+    background-color: black;
 }
 #a-character{
     margin-top: 10vmin;
@@ -31,6 +35,26 @@
 
     
 
+}
+
+.Carousel-text{
+    color: limegreen;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    margin-right: 25%;
+    margin-top: -20%;
+
+    
+}
+.carousel-control-prev-icon {
+    color: black;
+}
+.carousel-control-next-icon {
+    color: black;
+}
+.active-carousel-item {
+    background-color: grey;
 }
 
 #a-character img{
