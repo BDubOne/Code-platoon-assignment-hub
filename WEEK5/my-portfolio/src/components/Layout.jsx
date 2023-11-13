@@ -3,9 +3,10 @@ import NavBars from './Navbar';
 
 function Layout({ title, subtitle, children}) {
     return (
-        <>
+        <div>
         <NavBars />
         <Header title= {title} subtitle = {subtitle} />
+    
         <main>
             {children}
         </main>
@@ -16,7 +17,7 @@ function Layout({ title, subtitle, children}) {
                 2023
             </p>
         </footer>
-        </>
+        </div>
     )
 }
 

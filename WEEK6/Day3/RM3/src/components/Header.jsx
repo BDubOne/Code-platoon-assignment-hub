@@ -48,7 +48,7 @@ export const Header = ({favorites}) => {
             onChange={handleSearch}
             value={localSearchTerm}
             />
-            <Button type="submit">Search</Button>
+            <Button id="search-button" type="submit">Search</Button>
           </Form>
             
         </Nav>
