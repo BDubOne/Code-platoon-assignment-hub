@@ -6,7 +6,7 @@ A relational database is a database that organizes its information into tables (
 
 We do not need to write the database software ourselves - this has been done. We will use a database server or "relational database management system" (RDBMS). This is software designed to create, manage, control access to, and host relational databases that can handle thousands of queries per second.
 
-Some popular RDBMS systems are:
+Some popular RDBMS systems are:ha
 
 - [PostreSQL](https://www.postgresql.org/)
 - [MySQL](https://www.mysql.com/)

@@ -1,0 +1,14 @@
+SQL -- Structured Query Language
+
+Primary Keys. Foreign Keys  :: heart of the matter
+
+
+CRUD: CREATE READ UPDATE DELETE
+
+\conninfo: get what databse you are connected to at which port
+
+Types of DATA MODELS:
+
+CONCEPTUAL: business concepts
+LOGICAL: Define Data Structured
+Physical: DB Implementation details
