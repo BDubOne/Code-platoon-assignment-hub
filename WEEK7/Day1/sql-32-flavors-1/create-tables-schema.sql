@@ -50,12 +50,43 @@ CREATE TABLE employees(
     store_id INTEGER REFERENCES stores(id)
 );
 
-DROP TABLE IF EXISTS items CASCADE;
-CREATE TABLE items(
+DROP TABLE IF EXISTS flavors CASCADE;
+CREATE TABLE flavors(
     id SERIAL PRIMARY KEY,
     name VARCHAR,
+    cost INT,
+    quantity INT,
+    vegan BOOLEAN
+);
+
+DROP TABLE IF EXISTS cones CASCADE;
+CREATE TABLE cones(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    cost INT,
+    quantity INT,
+    gf BOOLEAN
+
+);
+
+DROP TABLE IF EXISTS materials CASCADE;
+CREATE TABLE materials(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR,
+    cost INT,
+    quantity INT
+
+);
+
+DROP TABLE IF EXISTS products CASCADE;
+CREATE TABLE products(
+    id SERIAL PRIMARY KEY,
+    flavor_id INTEGER REFERENCES flavors(id),
+    cone_id INTEGER REFERENCES cones(id),
+    material_id INTEGER REFERENCES materials(id),
     quantity INTEGER,
     cost INTEGER,
+    time_made TIMESTAMPTZ,
     store_id INTEGER REFERENCES stores(id)
 );
 
@@ -67,7 +98,7 @@ CREATE TABLE sales(
     date DATE,
     price INTEGER,
     quantity INTEGER,
-    item_id INTEGER REFERENCES items(id),
+    product_id INTEGER REFERENCES products(id),
     employee_id INTEGER REFERENCES employees(id),
     store_id INTEGER REFERENCES stores(id)
 );

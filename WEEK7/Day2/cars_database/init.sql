@@ -1,7 +1,7 @@
-create database cars;
+-- create database cars;
 
-\connect cars
-
+-- \connect cars
+DROP TABLE IF EXISTS AppUser CASCADE;
 CREATE TABLE AppUser (
 	account_id SERIAL PRIMARY KEY,
 	first_name TEXT NOT NULL,
@@ -13,8 +13,8 @@ CREATE TABLE AppUser (
 	CHECK (char_length(password)>=8)
 );
 
-
-CREATE TABLE UserProfile (
+DROP TABLE IF EXISTS userprofile;
+CREATE TABLE userprofile(
 	profile_id SERIAL PRIMARY KEY,
 	account_id INT NOT NULL REFERENCES AppUser(account_id),
 	street_name TEXT NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE UserProfile (
 	city TEXT NOT NULL
 );
 
-
+DROP TABLE IF EXISTS CarModel CASCADE;
 CREATE TABLE CarModel
 (
 	car_model_id SERIAL PRIMARY KEY,
@@ -32,7 +32,7 @@ CREATE TABLE CarModel
 	UNIQUE (make, model)
 );
 
-
+DROP TABLE IF EXISTS Car CASCAD;
 CREATE TABLE Car (
 	car_id SERIAL PRIMARY KEY,
 	number_of_owners INT NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE Car (
 	mileage INT
 );
 
-
+DROP TABLE IF EXISTS Advertisement;
 CREATE TABLE Advertisement(
 	advertisement_id SERIAL PRIMARY KEY,
 	advertisement_date TIMESTAMP WITH TIME ZONE NOT  NULL,
