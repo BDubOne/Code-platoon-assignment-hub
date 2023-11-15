@@ -38,11 +38,13 @@ from appuser
 join advertisement on advertisement.seller_account_id=appuser.account_id
 where advertisement.advertisement_date BETWEEN '2014-06-01' AND '2014-06-30';
 
-SELECT carmodel.make, carmodel.model
+COPY (SELECT carmodel.make, carmodel.model, car.car_id, COUNT(advertisement.car_id)
 FROM carmodel
-JOIN car ON car.car_id=carmodel.car_model_id
-JOIN advertisement ON car.car_model_id=advertisement.car_id
+JOIN car ON car.car_model_id=carmodel.car_model_id
+JOIN advertisement ON car.car_id=advertisement.car_id
 JOIN appuser ON appuser.account_id=advertisement.seller_account_id
-WHERE appuser.first_name='Wilda' AND appuser.last_name='Giguere';
+WHERE appuser.first_name='Wilda' AND appuser.last_name='Giguere'
+GROUP BY carmodel.make, carmodel.model, car.car_id) TO '~./#.csv' DELIMITER ',' CSV HEADER;
 
 
+-- , COUNT(advertisement.car_id)
