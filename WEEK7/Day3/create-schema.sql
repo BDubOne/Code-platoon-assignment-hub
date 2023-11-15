@@ -1,34 +1,40 @@
 
+DROP TABLE IF EXISTS user_accounts CASCADE;
 CREATE TABLE user_accounts(
     id SERIAL PRIMARY KEY,
     username VARCHAR,
     password VARCHAR,
     last_login_date TIMESTAMPTZ
 );
-
+DROP TABLE IF EXISTS user_profiles CASCADE;
 CREATE TABLE user_profiles(
     id SERIAL PRIMARY KEY,
-    profile_id INT REFERENCES user_profiles(id),
+    user_id INT REFERENCES user_accounts(id),
     profile_photo VARCHAR,
     about_me TEXT,
-    personel_quote VARCHAR
+    personal_quote VARCHAR
 );
-
+DROP TABLE IF EXISTS posts CASCADE;
+CREATE TABLE posts(
+    id SERIAL PRIMARY KEY,
+    content VARCHAR,
+    profile_id INT REFERENCES user_profiles(id)
+);
+DROP TABLE IF EXISTS comments CASCADE;
 CREATE TABLE comments(
     id SERIAL PRIMARY KEY,
     content TEXT,
     profile_id INT REFERENCES user_profiles(id),
     post_id INTEGER REFERENCES posts(id)
 );
+
+DROP TABLE IF EXISTS reaction_types CASCADE;
 CREATE TABLE reaction_types(
     id SERIAL PRIMARY KEY,
     type VARCHAR
 );
-CREATE TABLE posts(
-    id SERIAL PRIMARY KEY,
-    content VARCHAR,
-    profile_id INT REFERENCES user_profiles(id)
-);
+
+DROP TABLE IF EXISTS post_reactions CASCADE;
 CREATE TABLE post_reactions(
     id SERIAL PRIMARY KEY,
     post_id INTEGER REFERENCES posts(id),
@@ -50,7 +56,7 @@ VALUES
   -- add more users as needed;
 
 -- Generating random data for user_profiles table
-INSERT INTO user_profiles (profile_id, profile_photo_url, about_me, personal_quote)
+INSERT INTO user_profiles (user_id, profile_photo, about_me, personal_quote)
 VALUES
   (1, 'profile1.jpg', 'I love coding!', 'Live life to the fullest.'),
   (2, 'profile2.jpg', 'Foodie and traveler.', 'Stay positive.');
@@ -75,5 +81,5 @@ VALUES
 INSERT INTO post_reactions (post_id, reaction_id, profile_id)
 VALUES
   (1, 1, 2), -- User 2 likes Post 1
-  (2, 2, 1);-- User 1 loves Post 2
+  (2, 2, 1); -- User 1 loves Post 2
   -- add more reactions as needed;

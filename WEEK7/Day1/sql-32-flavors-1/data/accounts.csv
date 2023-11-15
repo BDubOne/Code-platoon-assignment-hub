@@ -1,0 +1,51 @@
+id,type,info_id,acct_number
+1,"Savings",1,12345
+2,"Checking",2,54321
+3,"Credit Card",3,98765
+4,"Savings",4,24680
+5,"Checking",5,13579
+6,"Credit Card",6,86420
+7,"Savings",7,11223
+8,"Checking",8,33445
+9,"Credit Card",9,55667
+10,"Savings",10,77889
+11,"Checking",11,99001
+12,"Credit Card",12,11222
+13,"Savings",13,33444
+14,"Checking",14,55666
+15,"Credit Card",15,77888
+16,"Savings",16,99000
+17,"Checking",17,11111
+18,"Credit Card",18,22222
+19,"Savings",19,33333
+20,"Checking",20,44444
+21,"Savings",21,13579
+22,"Checking",22,24680
+23,"Credit Card",23,11223
+24,"Savings",24,77889
+25,"Checking",25,99001
+26,"Credit Card",26,11222
+27,"Savings",27,33444
+28,"Checking",28,55666
+29,"Credit Card",29,77888
+30,"Savings",30,99000
+31,"Checking",31,11111
+32,"Credit Card",32,22222
+33,"Savings",33,33333
+34,"Checking",34,44444
+35,"Credit Card",35,55555
+36,"Savings",36,66666
+37,"Checking",37,77777
+38,"Credit Card",38,88888
+39,"Savings",39,99999
+40,"Checking",40,12345
+41,"Credit Card",41,54321
+42,"Savings",42,98765
+43,"Checking",43,24680
+44,"Credit Card",44,13579
+45,"Savings",45,11223
+46,"Checking",46,77889
+47,"Credit Card",47,99001
+48,"Savings",48,11222
+49,"Checking",49,33444
+50,"Credit Card",50,55666

@@ -1,0 +1,4 @@
+id,first_name,last_name,employee_id,store_id
+1,"Manager 1","Lastname 1",6,1
+2,"Manager 2","Lastname 2",7,2
+3,"Manager 3","Lastname 3",8,3
