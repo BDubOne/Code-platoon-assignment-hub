@@ -1,7 +1,0 @@
-id,name,cost,box_quantity,gf
-1,"Cake Cone",2,25,true
-2,"Waffle Cone",3,20,true
-3,"Sugar Cone",1,30,true
-4,"Cake Cone",4,22,false
-5,"Waffle Cone",5,18,false
-6,"Sugar Cone",6,28,false

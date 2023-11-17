@@ -1,9 +1,0 @@
-id,first_name,last_name,title,pay_rate,start_date,info_id,primary_acct_id
-1,"Rob","Pith","Barista",18,"2023-11-15",5,5
-2,"Bob","Smith","Barista",18,"2023-11-15",6,6
-3,"Charlie","Wilson","Shift Manager",20,"2023-11-15",7,7
-4,"David","Brown","Cook",16,"2023-11-15",8,8
-5,"Eva","Garcia","Server",17,"2023-11-15",9,9
-6,"Manager 1","Lastname 1",'Manager',30,"2023-11-15",10,10
-7,"Manager 2","Lastname 2",'Manager',30,"2023-11-15",11,11
-8,"Manager 3","Lastname 3",'Manager',30,"2023-11-15",12,12

@@ -16,7 +16,7 @@ select max(tempf) as max_temp, stations.name as station_name from reports join s
 
 SELECT min(tempf) as min_temp, stations.name as station_name from reports join stations on reports.station_id=stations.id GROUP BY stations.id order by min_temp;
 --   1.3 Find the hottest and coldest record for each station in a single query.
-SELECT min(tempf) as min_temp, max(tempf) as max_temp, stations.name as station_name from reports join stations on reports.station_id=stations.id GROUP BY stations.id order by station_name;
+SELECT min(tempf) as min_temp, max(tempf) as max_temp, name from reports join stations on reports.station_id=stations.id GROUP BY stations.id order by station_name;
 
 -- Can we find the average wind speed for each day at each station?
 
@@ -26,7 +26,7 @@ from reports
 group by 1, 2
 order by 1, 2;
 
-select stations.name, reports.time::date as report_date, avg(wind_speed)::int as avg_wind_speed
+select stations.name, reports.time::date as report_date, avg(wind_speed):: as avg_wind_speed
 from reports
 join stations on reports.station_id=stations.id
 group by report_date, stations.name order by report_date, stations.name;
@@ -64,18 +64,13 @@ from reports
 join stations on reports.station_id=stations.id
 group by report_date, stations.name order by report_date, stations.name;
 
--- Now that we can find daily statistics, let's find the monthly average high and low temperatures at each station.
-
- select stations.name, reports.time::date as report_date, min(tempf) as min_temp, max(tempf) as max_temp, count(*) as sample_count
-from reports
-join stations on reports.station_id=stations.id
-group by report_date, stations.name order by report_date, stations.name;
+-- Now that we can find daily statistics, let's find the monthly average high and low temperatures at each station. A
 -- sub-query that returns a result set and can be used in a FROM clause.
 
 select name,
   left(date::text, 7),
-  avg(min_wind_speed) as avg_min_wind_speed,
-  avg(max_wind_speed) as avg_max_wind_speed
+  avg(min_tempf) as avg_min_tempf,
+  avg(max_tempf) as avg_max_tempf
 from (
   select stations.name,
     time::date as date,
@@ -89,6 +84,26 @@ from (
     join stations on reports.station_id=stations.id
   group by 1, 2
 ) t
+group by 1, 2
+order by 1, 2;
+
+select name, 
+left(date::text, 7),
+avg(min_tempf) as avg_min_tempf,
+avg(max_tempf) as avg_max_tempf
+from (
+  select stations.name,
+  time::date as date,
+  min(tempf) min_tempf,
+  max(tempf) max_tempf,
+  min(humidity) min_humidity,
+  max(humidity) max_humidity,
+  min(wind_speed) min_wind_speed,
+  max(wind_speed) max_wind_speed
+  from reports
+  join stations on reports.station_id=stations.id
+  group by stations.id, date
+) temp_table
 group by 1, 2
 order by 1, 2;
 
