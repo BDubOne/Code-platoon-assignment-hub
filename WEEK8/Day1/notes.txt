@@ -1,0 +1,61 @@
+virtual environment : source .venv/bin/activate
+
+pip install Django
+
+pip install --upgrade pip
+
+we will only use settings.py and urls.py directly.  We will access manage.py. There is no need to mess with any of the other premade py files in Django
+
+on settings.py,
+
+Installed Apps may be added. Pretty much all of the original files will not need to be touched.
+
+
+the Databases {} dictionary will be modified
+
+
+you can adjust default language and timezone
+
+
+you can direct your program to specific files (js, css, images)
+
+python manage.py startapp_<app_name>
+
+In settings.py, if you add an app, place the app in Installed_APPS in the settings.py
+
+in models.py is where sql tabls are generated using python.
+
+
+add a python class
+
+class <classname>(models.Model):
+'''model template '''
+<varchar attribute>= models.charField(max_length=255),
+<integer attribute with default> = models.IntegerField(default=1)
+<boolean attribute with default> = models.BooleanField(default=False)
+
+python manage.py makemigrations is the command for making a new migration if needed.
+
+You can run this any time you modify the models or apps in the django project
+
+python manage.py migrate is the command for executing migrations. //
+
+python manage.py shell enters the command line interface for dealing with the django program
+
+>>> from pokemon_app.models import Pokemon
+>>> pikachu = Pokemon(name = 'Pikachu', level = 12)
+>>> pikachu.save()
+
+>>> charmander = Pokemon(name = 'Charmander', level=12)
+>>> charmander.save()
+>>> Pokemon.objects.all()
+
+>>> all_poke =Pokemon. objects.all()
+
+
+
+
+
+
+
+

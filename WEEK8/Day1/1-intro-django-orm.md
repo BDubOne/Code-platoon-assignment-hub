@@ -234,8 +234,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 ```python
 # Python Terminal
->>> pikachu = Pokemon(name = 'Pikachu', level = 12)
->>> pikachu.save()
+ 
 ```
 
 > This should look familiar - the object oriented lessons from weeks 2 and 3 were in preparation for this. Just by writing those two lines of code, we are able to instantiate a pokemon object for us and save it into the database. Under the hood, it's just running:
