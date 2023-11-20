@@ -52,6 +52,11 @@ python manage.py shell enters the command line interface for dealing with the dj
 
 >>> all_poke =Pokemon. objects.all()
 
+use a fixtures folder to store mock Data
+
+and then make json files with the Data
+
+
 
 
 

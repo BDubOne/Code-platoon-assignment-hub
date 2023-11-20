@@ -3,11 +3,11 @@ from django.db import models
 # Create your models here.
 class Student(models.Model):
     name = models.CharField(max_length=255, null = False, blank = False)
-    student_email = models.EmailField(null = False, blank = False)
-    personal_email = models.EmailField(null = False, blank = False)
-    locker_number = models.IntegerField(default=1, null = False, blank = False)
-    locker_combination = models.CharField(max_length=255, null = False, blank = False)
-    good_student = models.BooleanField()
+    student_email = models.EmailField(null=False, blank=False)
+    personal_email = models.EmailField(null=False)
+    locker_number = models.IntegerField(default=1)
+    locker_combination = models.CharField(default='0000')
+    good_student = models.BooleanField(default=True)
 
     def __str__(self):
         return f'{self.name} - {self.student_email} - {self.locker_number}'
