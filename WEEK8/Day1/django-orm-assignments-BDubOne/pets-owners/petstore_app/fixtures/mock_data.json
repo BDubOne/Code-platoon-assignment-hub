@@ -1,0 +1,71 @@
+[
+    {
+        "model": "petstore_app.owner",
+        "pk":1,
+        "fields": {
+        "name": "John Smith",
+        "age": 35,
+        "number_of_pets": 2
+        }
+    },
+    {
+        "model": "petstore_app.animal",
+        "pk":1,
+        "fields": {
+            "name": "Fluffy",
+            "age": 3,
+            "vaccinated": true,
+            "description": "A cute and friendly pet."
+        }
+    },
+    {
+        "model": "petstore_app.cat",
+        "pk":1,
+        "fields": {
+            "name": "Whiskers",
+            "age": 4,
+            "vaccinated": true,
+            "description": "A playful and fluffy cat.",
+            "breed": "Persian"
+        }
+
+    },
+    {
+        "model": "petstore_app.bird",
+        "pk":1,
+        "fields": {
+            "name": "Tweetie",
+            "age": 2,
+            "vaccinated": false,
+            "description": "A colorful and chirpy bird.",
+            "species": "Parakeet"
+        }
+
+    },
+    {
+        "model": "petstore_app.dog",
+        "pk":1,
+        "fields": {
+            "name": "Buddy",
+            "age": 5,
+            "vaccinated": true,
+            "description": "A loyal and energetic dog.",
+            "breed": "Golden Retriever"
+        }
+
+    },
+    {
+        "model": "petstore_app.exoticanimal",
+        "pk":1,
+        "fields": {
+            "name": "Zara",
+            "age": 6,
+            "vaccinated": true,
+            "description": "An exotic and rare animal.",
+            "region_of_origin": "Jungle",
+            "type_of_animal": "Tiger"
+        }
+
+    }
+    
+]

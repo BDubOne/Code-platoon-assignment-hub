@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class Student(models.Model):
     name = models.CharField(max_length=255, null = False, blank = False)
-    student_email = models.EmailField(null=False, blank=False)
-    personal_email = models.EmailField(null=False)
-    locker_number = models.IntegerField(default=1)
+    student_email = models.EmailField(null=False, blank=False, unique=True)
+    personal_email = models.EmailField(null=False, unique=True)
+    locker_number = models.IntegerField(default=1, unique=True)
     locker_combination = models.CharField(default='0000')
     good_student = models.BooleanField(default=True)
 
