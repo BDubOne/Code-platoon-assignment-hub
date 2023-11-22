@@ -3,7 +3,7 @@ from django.core.exceptions import ValidationError
 
 def validate_name(name):
     error_message= 'Name must be in the format "First Middle Initial. Last"'
-    regex = r'^[A-Za-z]+\s+[A-Z]+\.+\s+[A-Za-z]+$'
+    regex = r'^[A-Za-z]+\s[A-Z]\.\s[A-Za-z]+$'
     good_name=re.match(regex,name)
 
     if good_name:

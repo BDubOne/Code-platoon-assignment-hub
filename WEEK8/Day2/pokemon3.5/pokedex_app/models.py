@@ -5,6 +5,22 @@ from django.utils import timezone
 
 #imports from my code
 from .validators import validate_name
+from move_app.models import Move
+
+
+class Trainer(models.Model):
+    name = models.CharField()
+    gym_badges= models.IntegerField(default=0)
+
+
+class Pokedex(models.Model):
+
+    trainer = models.OneToOneField(Trainer, on_delete=models.CASCADE, null=True, default=None)
+    full= models.BooleanField()
+
+    def __str__(self):
+        return f'Pokedex {self.name} is {self.trainer}\'s Pokedex'
+
 
 
 class Pokemon(models.Model):
@@ -15,6 +31,8 @@ class Pokemon(models.Model):
     date_captured=models.DateTimeField(default=timezone.now)
     description = models.TextField(default='Unknown', validators=[v.MinLengthValidator(7), v.MaxLengthValidator(500)])
     captured= models.BooleanField(default=False)
+    trainer = models.ForeignKey(Trainer, on_delete=models.PROTECT, null=True, blank=True)
+    moves = models.ManyToManyField(Move,related_name='pokemon')
 
     class Meta:
         verbose_name_plural='pokemon'
@@ -43,6 +61,8 @@ class Pokemon(models.Model):
     def set_description(self, new_description):
         self.description=new_description
         self.full_clean_save()
+
+
 
 
 
