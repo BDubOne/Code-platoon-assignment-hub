@@ -1,6 +1,8 @@
 import json
 from django.shortcuts import render
-from django.core.serializers import serialize
+from .serializers import PokemonSerializer
+from .models import Pokemon
+from django.http import HttpResponse
 
 from .models import Pokemon
 
@@ -17,4 +19,7 @@ def get_pokemon(name):
     serialized_desired_pokemon = serialize("json", [desired_pokemon])
     return serialized_desired_pokemon
 
+def pokemon_hello_world(request):
+    a_pokemon=Pokemon.objects.first()
+    return HttpResponse(f"a pokemon name is {a_pokemon.name}")
 # Create your views here.
