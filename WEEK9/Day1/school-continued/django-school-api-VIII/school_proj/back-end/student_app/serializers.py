@@ -15,6 +15,7 @@ class StudentAllSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = [
+            "id",
             "name",
             "student_email",
             "personal_email",
@@ -22,7 +23,5 @@ class StudentAllSerializer(serializers.ModelSerializer):
             "locker_combination",
             "good_student",
             "subjects",
-        ]
 
-        # def get_subjects(self, obj):
-        #     return SubjectSerializer(obj.students.all(), many=True).data
+        ]
