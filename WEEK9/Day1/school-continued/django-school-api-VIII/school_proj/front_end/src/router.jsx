@@ -30,7 +30,7 @@ const router = createBrowserRouter([
                 element: <Subjects />
             },
             {
-                path: 'subjects/:id/',
+                path: 'subjects/:subject_name/',
                 element: <SingleSubject />
             },
         ],

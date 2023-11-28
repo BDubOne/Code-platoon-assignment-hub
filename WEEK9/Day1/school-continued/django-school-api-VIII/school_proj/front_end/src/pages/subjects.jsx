@@ -33,7 +33,9 @@ export const Subjects = () => {
                     }}
                     >
                         Subject Name:{subject.subject_name} <br />
-                        Professor: {subject.professor}
+                        Professor: {subject.professor} <br />
+                        Students: {subject.students} <br />
+                        Average Grade: {subject.grade_average}
                     </li>
                 ))}
             </ul>
