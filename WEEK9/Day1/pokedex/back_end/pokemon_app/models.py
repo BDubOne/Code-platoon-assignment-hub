@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 
 from django.core import validators as v
-from .validators import validate_name
+from .validators import validate_name, validate_type
 
 from move_app.models import Move
 
@@ -20,6 +20,8 @@ class Pokemon(models.Model):
 
     captured = models.BooleanField(default = False)
     moves = models.ManyToManyField(Move, related_name='pokemon')
+
+    type = models.CharField(default="normal", validators=[validate_type])
 
     def __str__(self):
         return f"{self.name} {'has been captured' if self.captured else 'is yet to be caught'}"

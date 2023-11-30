@@ -1,6 +1,11 @@
 import Row from 'react-bootstrap/Row'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom'
+
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+import ListGroupItem from 'react-bootstrap/ListGroupItem';
 
 export const Students = () => {
 
@@ -21,34 +26,33 @@ export const Students = () => {
     }, []);
 
     return (
-        <Row style={{padding: "0 10vmin"}}>
-            <h1 style = {{ textAlign: "center"}}> Students</h1>
-            <ul>
-                {students.map((student)=> (
-                    <li key={student.id}
-                    style={{
-                        margin: "3vmin",
-                        display: "flex",
-                        flexDirection: "column",
-                    }}
-                    >
-                        Id: {student.id} <br /> Name:{student.name} <br /> Student Email: {student.student_email}
-                        <ul>
-                        
-                            {student.subjects.map((subject, idx) => (
-                                <li key= {`${student.id}${idx}`}
-                                style={{
-                                    margin: "3vmin",
-                                    display: "flex",
-                                    flexDirection: "column",
-                                }}
-                                >{subject.subject_name}</li>
-                            ))}
-                        </ul>
-                    </li>
-                    ))}
-            </ul>
-        </Row>
+        <>
+        {students.map((student) => (
+            <Card key={student.id} style={{ margin: '1rem' }}>
+                <Card.Body>
+                    <Card.Title>
+                    <Link to={`${student.id}/`}>{student.name}</Link>
+                    </Card.Title>
+                    <Card.Subtitle className="mb-2 text-muted">Student ID: {student.id}</Card.Subtitle>
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem>Student Email: {student.student_email}</ListGroupItem>
+                        <ListGroupItem>Good Student: {student.good_student ? 'Yes' : 'No'}</ListGroupItem>
+                        <ListGroupItem>
+                            Subjects:
+                            <ul>
+                                {Object.entries(student.subjects).map(([subjectName, grade]) => (
+                                    <li key={subjectName}>
+                                        {subjectName}: {grade}
+                                    </li>
+                                ))}
+                            </ul>
+                        </ListGroupItem>
+                    </ListGroup>
+                </Card.Body>
+            </Card>
+        ))}
+        </>
+        
     )
 
 

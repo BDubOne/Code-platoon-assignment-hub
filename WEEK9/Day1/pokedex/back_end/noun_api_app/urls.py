@@ -3,6 +3,6 @@ from .views import NounProject
 
 
 urlpatterns = [
-    path('',NounProject.as_view()),
+    path('<str:types>/', NounProject.as_view(), name="noun_project")
     
 ]

@@ -1,7 +1,7 @@
-import Row from 'react-bootstrap/Row'
+
 import Card from 'react-bootstrap/Card'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import axios from 'axios'
 
 export const SingleStudent = () => {
@@ -21,6 +21,16 @@ export const SingleStudent = () => {
         getSingleStudent();
     }, [])
 
+    const handleDelete = async ()=> {
+        try {
+            await axios.delete(`http://127.0.0.1:8000/api/v1/students/${id}/`);
+            alert(`Student with ID ${id} has been deleted`);
+        } catch (err) {
+            console.log(err);
+            alert('could not delete student')
+        }
+    };
+
     return (
         <Card style = {{ width: '18rem' }}>
             <Card.Body>
@@ -33,9 +43,20 @@ export const SingleStudent = () => {
                     Student Email: {singleStudent.student_email}
                     <br />
                     Locker Number: {singleStudent.locker_number}
-                    <br />              
+                    <br />
+                    Good Student: {singleStudent.good_student ? "Yes" : "No"}
+                    <br />
+                    <ul>
+                        {Object.entries(singleStudent.subjects || {}).map(([subjectName, grade]) => (
+                            <li key={subjectName}>
+                                {subjectName}: {grade}
+                            </li>
+                        ))}
+                    </ul>
 
                 </Card.Text>
+                <button onClick={handleDelete}>Delete</button>
+                 <Link to="edit/">Edit</Link>
             </Card.Body>
         </Card>
     )

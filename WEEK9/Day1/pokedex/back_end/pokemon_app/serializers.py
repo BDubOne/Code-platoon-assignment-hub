@@ -6,7 +6,7 @@ class PokemonSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Pokemon
-        fields = ['id', 'name', 'level', 'moves']
+        fields = '__all__'
 
     def get_moves(self, instance):
         moves = instance.moves.all()

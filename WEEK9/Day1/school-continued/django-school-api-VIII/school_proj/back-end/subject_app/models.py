@@ -1,4 +1,5 @@
 from django.db import models
+from django.core import validators as v
 from .validators import validate_professor_name, validate_subject_format
 
 
@@ -10,6 +11,7 @@ class Subject(models.Model):
     professor = models.CharField(
         blank=False, null=False, validators=[validate_professor_name]
     )
+    
     # related field students mtm field from Student model
 
     def __str__(self):

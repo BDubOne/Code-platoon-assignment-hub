@@ -9,7 +9,8 @@
         "date_captured": "2023-08-22T15:05:52.618Z",
         "description": "Unknown",
         "captured": true,
-        "moves": []
+        "moves": [],
+        "type": "grass"
       }
     },
     {

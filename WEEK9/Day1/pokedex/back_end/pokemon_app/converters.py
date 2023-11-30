@@ -1,5 +1,5 @@
 class IntoOrStrConverter:
-    regex = '[0-9] +|[a-zA-Z]+'
+    regex = '[0-9]|[a-zA-Z]+'
 
     def to_python(self, value):
         if value.isdigit():

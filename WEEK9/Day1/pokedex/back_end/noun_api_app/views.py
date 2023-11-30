@@ -1,23 +1,20 @@
+import requests
+import pprint
 from django.shortcuts import render
 from pokedex_proj.settings import env
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
-import requests
 from requests_oauthlib import OAuth1
 
 class NounProject(APIView):
-    def get(self, request):
+    def get(self, request, types):
         noun_project_api_key = env.get("NOUN_PROJECT_API_KEY")
         noun_project_secret_key=env.get("NOUN_PROJECT_SECRET_KEY")
 
         auth = OAuth1(noun_project_api_key,noun_project_secret_key)
-        endpoint = "https://api.thenounproject.com/v2/icon/1"
+        endpoint = f"https://api.thenounproject.com/v2/icon?query={types}"
 
         response = requests.get(endpoint, auth=auth)
-        print(response.content)
-        endpoint = "https://api.thenounproject.com/v2/icon/1"
-
-        response_json = response.json()
-        print(response.content)
-        return Response(response_json)
+        response_json = response.json()["icons"][0]["thumbnail_url"]
+        return Response({"image": response_json})
