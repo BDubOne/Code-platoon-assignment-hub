@@ -1,0 +1,22 @@
+Rout 53 DNS
+
+AWS UBUNTU EC2 Instance
+
+NGINX --Deployment server.
+
+Make REACT CSS SIIIMPLE
+
+
+Gunicorn --turn python into browser-readable format
+
+
+ssh -i <your_pem_key>.pem ubuntu@<ip_address>
+
+chmod 600 <pem-name>.pem
+
+sudo apt update
+
+sudo vim .env
+
+ 
+

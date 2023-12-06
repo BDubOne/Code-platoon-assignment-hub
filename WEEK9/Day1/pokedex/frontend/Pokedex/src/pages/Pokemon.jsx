@@ -1,7 +1,7 @@
 import Row from "react-bootstrap/Row"
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { PokemonItem, PokemonForm } from "../components/PokemonItem";
+import { PokemonItem } from "../components/PokemonItem";
 
 export const Pokemon=()=>{
 

@@ -1,0 +1,97 @@
+using cookies is good for token validation to protect tokens
+
+cookie settings for settings.py
+
+debug=False (change back to true if there is a problem)
+
+ALLOWED_HOSTS = ["0.0.0.0"]
+
+CORS_ALLOWED_ORIGINS = ["0.0.0.0"]
+
+CORS_ALLOW_CREDENTIALS = True
+
+SESSION_COOKIE_SECURE = True
+
+SESSION_COOKIE_HTTPONLY = True
+
+on SignUp View
+
+from datetime import datetime, timedelta
+
+
+
+life_time = datetime.now() + timedelta(days=7)
+formatted_life_time life_time.strftime("%a, %d %b %Y %H: %M%S GMT")
+
+
+response = Response({"user":user.email}, status=HTTP_201_CREATED)
+response.set_cookie(key="token", value=token.key, httponly = True, secure = True, samesite = "Lax", expires = formatted_life_time)
+
+return response
+
+gunicorn --bind <project_name>.wsgi 0.0.0.0:8000
+
+restart gunicorn to change deeper things like cookie requirements
+
+Token authentication needs to change once you do this.
+
+Change authentication method:
+
+run gunicorn in --daemon mode
+
+make a utilities.py
+
+sudo vim utilities.py
+
+from rest_framework.authentication import TokenAuthentication
+
+from rest_framework.exceptions import AuthenticationFailed
+
+class HttpOnlyTokenAuthentication(TokenAuthentication):
+    def get_auth_token_from_cookie(self, request):
+        return resquest.COOKIES.get("token")
+    
+    def authenticate(self, request):
+        auth_token= self.get_auth_token_from_cookie(request)
+
+        if not auth_token:
+            return None
+        
+        return self.authenticate_credentials(auth_token)
+
+        sudo vim utilitis.jsx
+
+        import {api} from "./utilities";
+
+
+        const logOut = async() => {
+            let response = await api.post("users/logout/")
+            if (response.status === 204){
+                setUser(null)
+            } else {
+                alert("something went wrong")
+            }
+        }
+
+        pkill gunicorn 
+        
+        gunicorn <proj_name>.wsgi 0.0.0.0:8000
+
+
+        sudo vim views.py
+
+        from .utilities import HttpOnlyTokenAuthentication
+
+        class LogOut(APIView):
+        authentication_classes = [HttpOnlyTokenAuthentication]
+        permission_classes = [IsAuthenticated]
+
+
+        gunicorn <proj_name>.wsgi --bind 0.0.0.0:8000 --daemon
+
+        json webtokens.....
+
+        jwt.io
+
+
+

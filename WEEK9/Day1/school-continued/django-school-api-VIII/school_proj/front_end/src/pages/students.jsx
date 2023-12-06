@@ -36,17 +36,7 @@ export const Students = () => {
                     <Card.Subtitle className="mb-2 text-muted">Student ID: {student.id}</Card.Subtitle>
                     <ListGroup className="list-group-flush">
                         <ListGroupItem>Student Email: {student.student_email}</ListGroupItem>
-                        <ListGroupItem>Good Student: {student.good_student ? 'Yes' : 'No'}</ListGroupItem>
-                        <ListGroupItem>
-                            Subjects:
-                            <ul>
-                                {Object.entries(student.subjects).map(([subjectName, grade]) => (
-                                    <li key={subjectName}>
-                                        {subjectName}: {grade}
-                                    </li>
-                                ))}
-                            </ul>
-                        </ListGroupItem>
+                      
                     </ListGroup>
                 </Card.Body>
             </Card>

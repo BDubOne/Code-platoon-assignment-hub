@@ -28,7 +28,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'students/:id/edit',
-                element: <EditSingleStudent />
+                element: <EditSingleStudent/>
             },
             {
                 path: 'subjects/',

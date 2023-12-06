@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 from dotenv import dotenv_values
 
+AUTH_USER_MODEL = 'trainer_app.Trainer'
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -32,6 +34,15 @@ ALLOWED_HOSTS = []
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+# ALLOWED_HOSTS = ["0.0.0.0"]
+
+# CORS_ALLOWED_ORIGINS = ["0.0.0.0"]
+
+# CORS_ALLOW_CREDENTIALS = True
+
+# SESSION_COOKIE_SECURE = True
+
+# SESSION_COOKIE_HTTPONLY = True
 
 # Application definition
 
@@ -44,7 +55,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "pokemon_app",
     "rest_framework",
+    'rest_framework.authtoken',
     "move_app",
+    "trainer_app",
     "noun_api_app",
     "corsheaders",
 ]
@@ -132,6 +145,12 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+}
 
 env=dotenv_values(".env")
 

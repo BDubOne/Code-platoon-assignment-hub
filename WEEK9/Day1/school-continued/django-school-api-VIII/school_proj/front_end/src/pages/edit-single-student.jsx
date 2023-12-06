@@ -1,51 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
-
-export const EditSingleStudent = () => {
+export const EditSingleStudent = ({ initialData }) => {
     const { id } = useParams();
+    const [formData, setFormData] = useState(initialData || {});
+    // const location = useLocation();
+    // const queryParams = new URLSearchParams(location.search)
+    // const initialData = JSON.parse(queryParams.get('initialData'))
+    
 
-    const [student, setStudent] = useState({});
-    const [formData, setFormData] = useState({
-        name: '',
-        student_email: '',
-        personal_email: '',
-        locker_number: '',
-        locker_combination: '',
-
-    });
-
-    const getSingleStudent = async () => {
-        try {
-            response = await axios
-            .get(`http://127.0.0.1:8000/api/v1/students/${id}/`)
-            setStudent(response.data);
-            setFormData({
-                name: response.data.name,
-                student_email: response.data.student_email,
-                personal_email: response.data.personal_email,
-                locker_number: response.data.locker_number,
-                locker_combination: response.data.locker_combination,
-                good_student: response.data.good_student
-            });
-        } catch (err) {
-            console.log(err);
-            alert('oops');
-        }
-    };
-    useEffect(() => {
-        getSingleStudent();
-
-    }, [id]);
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    } ;
-   
+        const { name, value, type, checked } = e.target;
+
+        // Use the type of the input to determine how to update the formData
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: type === 'checkbox' ? checked : value,
+            
+        }));
+      
+    };
+    console.log(initialData)
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -56,7 +33,9 @@ export const EditSingleStudent = () => {
             alert('Failed to update student');
         }
     };
-    
+
+
+
     return (
         <div>
             <h1>Edit Student</h1>
@@ -66,7 +45,7 @@ export const EditSingleStudent = () => {
                     <input
                         type="text"
                         name="name"
-                        value={formData.name}
+                        value={formData.name || ''}
                         onChange={handleChange}
                     />
                 </div>
@@ -75,11 +54,46 @@ export const EditSingleStudent = () => {
                     <input
                         type="email"
                         name="student_email"
-                        value={formData.student_email}
+                        value={formData.student_email || ''}
                         onChange={handleChange}
                     />
                 </div>
-                {/* Add more form fields for other attributes */}
+                <div>
+                    <label>Personal Email:</label>
+                    <input
+                        type="email"
+                        name="personal_email"
+                        value={formData.personal_email || ''}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Locker Number:</label>
+                    <input
+                        type="integer"
+                        name="locker_number"
+                        value={formData.locker_number || ''}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Locker Combination:</label>
+                    <input
+                        type="text"
+                        name="locker_combination"
+                        value={formData.locker_combination || ''}
+                        onChange={handleChange}
+                    />
+                </div>
+                <div>
+                    <label>Good Student:</label>
+                    <input
+                        type="checkbox"
+                        name="good_student"
+                        checked={formData.good_student || false}
+                        onChange={handleChange}
+                    />
+                </div>
                 <button type="submit">Update</button>
             </form>
         </div>

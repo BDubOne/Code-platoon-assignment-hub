@@ -4,6 +4,7 @@ import App from "./App";
 import { Pokemon } from './pages/Pokemon';
 import { Home } from './pages/home';
 import { Moves } from './pages/moves';
+import { RegisterPage } from "./pages/RegisterPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 
 const router = createBrowserRouter([
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
                 index: true,
                 element: <Home />
 
+            },
+            {
+                path: "register/",
+                element: <RegisterPage/>,
             },
             {
                 path: "pokemon/",
