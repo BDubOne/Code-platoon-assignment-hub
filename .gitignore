@@ -1,1 +1,10 @@
 node_modules
+.venv
+.env
+.ssh
+.git
+.data
+*.pdf
+*.jpg
+*.jpeg
+*.png
